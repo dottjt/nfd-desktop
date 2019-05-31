@@ -17,7 +17,9 @@ const generateTemplateType = (item, items, type) => {
 const generateTemplates = (items, type) => {
   for (const item of items) {
     const template = generateTemplateType(item, items, type);
-    fse.outputFileSync(`src/content/${type}/${item.slug}.html`, template, [{}]);
+    const templateWithLayout = layoutTemplate(template);
+
+    fse.outputFileSync(`src/content/${type}/${item.slug}.html`, templateWithLayout, [{}]);
   }
 };
 
