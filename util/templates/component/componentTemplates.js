@@ -70,8 +70,22 @@ const shareButtons = () => `
   </div>
 `;
 
+const patreonLink = () => `
+  <div class="account__info">
+    <p class="account__info__title">Check out my Patreon for updates on NeverFap Deluxe!</p>
+    <div class="account__buttons">
+
+      <a class="account__patreon__button__container" href="https://patreon.com/NeverFapDeluxe">
+        <img class="account__patreon__button__logo" src="/images/patreon__logo.jpg" />
+        <p class="account__patreon__button__text"><span class="account__patreon__button__text--display">BECOME A </span>PATRON</p>
+      </a>
+    </div>
+  </div>
+`;
+
 module.exports = {
   reddit__question__banner,
   shareButtons,
   nextPrevious,
+  patreonLink,
 }

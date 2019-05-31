@@ -2,8 +2,8 @@ const {
   reddit__question__banner,
   shareButtons,
   // nextPrevious,
-} = require('./componentTemplates');
-
+  patreonLink,
+} = require('../component/componentTemplates');
 
 const articlesTemplate = (article, articles) => `
   <div class="single__wrapper practices__wrapper">
@@ -23,13 +23,12 @@ const articlesTemplate = (article, articles) => `
     <span><span class="homepage__process__link">${article.date}</span></span>
   </div>
 
-  <%= partial "links/patreon.html", assigns %>
+  ${patreonLink()}
 
   <div class="single__wrapper">
     <div class="single__content">
       ${article.content}
     </div>
-
     ${shareButtons()}
   </div>
 
@@ -48,13 +47,10 @@ const articlesTemplate = (article, articles) => `
           >Want More Articles?</a
         >
       </div>
-
     </div>
   </div>
 
-  <%= partial "subscriber/seven_day_kickstarter_banner.html", %{ conn: @conn, seven_day_kickstarter_changeset: @seven_day_kickstarter_changeset } %>
   <div style="margin-top: 5rem;"></div>
-  <%= partial "links/loginregister.html", assigns %>
 `
 
 module.exports = articlesTemplate;
