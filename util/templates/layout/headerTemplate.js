@@ -4,7 +4,6 @@ const headerTemplate = () => `
       <h1 class="header__logo">NeverFap <span class="deluxe__font">Deluxe</span> <i class="em em-rainbow"></i></h1>
     </a>  %> -->
     <ul class="header__links">
-
       <!-- HOME -->
       <a id="link__home" class="header__link__wrapper" href="/">
         <li class="header__link">Home</li>
@@ -21,7 +20,6 @@ const headerTemplate = () => `
           <p>NeverFap Deluxe is a porn addiction recovery process which focuses on the use of meditation and awareness in order to develop control over our minds.</p>
         </div>
       </div>
-
 
       <!-- Guide -->
       <a id="link__guide" class="header__link__wrapper header__link__wrapper--main" href="/guide">

@@ -18,6 +18,17 @@ const generateArticlesContent = async () => {
   }
 };
 
+const generateArticlesContent = async () => {
+  try {
+    const response = await axios.get(ARTICLES_URL);
+    const items = response.data.data.articles;
+
+    generateTemplates(items, 'articles');
+  } catch (error) {
+    throw new Error(`generateArticlesContent - ${error}`);
+  }
+};
+
 const generatePracticesContent = async () => {
   try {
     const response = await axios.get(PRACTICES_URL);
